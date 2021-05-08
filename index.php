@@ -1,23 +1,12 @@
-<?php include_once('header.php'); 
+<?php 
 session_start();
-if(!empty($_SESSION['result']['id'])) {
-header('location:profile.php');
+include_once('include/header.php');
+if(!empty($_SESSION['user_id'])) {
+header('location:fcstmr_type.php');
 }
-
-$options = [
-    'cost' => 12,
-];
-echo $hash = password_hash('F($tm6', PASSWORD_DEFAULT);
-echo "<br>";
-if (password_verify('F($tm6', $hash)) {
-    echo 'Password is valid!';
-} else {
-    echo 'Invalid password.';
-}
-
 ?>
 <div class="login-form">
-    <form action="/examples/actions/confirmation.php" method="post">
+    <form>
         <h2 class="text-center">Sign in</h2>   
         <div class="form-group">
           <div class="input-group">
@@ -40,8 +29,9 @@ if (password_verify('F($tm6', $hash)) {
             </div>
         </div>        
         <div class="form-group">
-            <button type="submit" class="btn btn-primary login-btn btn-block"><i class="fa fa-sign-in"></i> Sign in</button>
+            <button type="submit" name="submit" value="Submit" class="btn btn-primary login-btn btn-block"><i class="fa fa-sign-in"></i> Sign in</button>
         </div>
     </form>
+    <p id="version-center">&copy; <?php echo date('Y');?> - V1.0</p>
 </div>
- <?php include_once('footer.php'); ?>
+ <?php include_once('include/footer.php'); ?>

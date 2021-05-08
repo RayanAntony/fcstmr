@@ -30,3 +30,16 @@ body {
     font-weight: bold;
   	min-height: 40px;
 }
+
+.login-error{
+    color:#ff6849;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#version-center{
+    text-align: center;
+}
+tfoot {
+    display: table-header-group;
+}
