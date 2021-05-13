@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start();
-if(!empty($_SESSION['user_id'])) {
+if (!empty($_SESSION['user_id'])) {
     include_once('include/header.php');
     ?>
     <a href="action.php?action=logout" class="pull-right"><i class="fa fa-sign-out"></i> Logout</a><br>
@@ -43,9 +43,8 @@ if(!empty($_SESSION['user_id'])) {
 </div>
 </div>
 <p class="pull-right">&copy; <?php echo date('Y'); ?> - V1.0</p>
-<?php 
-include_once('include/footer.php'); 
-}
-else{
+    <?php
+    include_once('include/footer.php');
+} else {
     header("Location:index.php");
 }?>

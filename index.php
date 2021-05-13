@@ -1,8 +1,8 @@
-<?php 
+<?php
 session_start();
 include_once('include/header.php');
-if(!empty($_SESSION['user_id'])) {
-header('location:fcstmr_type.php');
+if (!empty($_SESSION['user_id'])) {
+    header('location:fcstmr_type.php');
 }
 ?>
 <div class="login-form">
