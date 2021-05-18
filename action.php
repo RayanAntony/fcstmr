@@ -1,4 +1,5 @@
 <?php
+
 /*
 * Author: Antony Rayn
 * Version: 1.0
@@ -6,8 +7,8 @@
 * App Name: FCSTMR Type
 * Description: All CRUD operations will be done here based on selected action
 */
-include_once __DIR__.'/include/Functions.php';
-use include\Functions;
+include_once __DIR__ . '/include/functions.php';
+//use include\Functions;
 $object = new Functions();
 if (isset($_REQUEST["action"])) {
     if ($_REQUEST["action"] == "login") {

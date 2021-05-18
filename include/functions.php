@@ -43,10 +43,11 @@ class Functions
         $responses['data'] = array();
         while ($row = mysqli_fetch_array($result)) {
             $responses['data'][] = array(
-            "aid" => $row['aid'],
-            "id" => $row['id'],
-            "name" => $row['name'],
-            "magento_id" => $row['magento_id']
+            "aid"        => $row['aid'],
+            "id"         => $row['id'],
+            "name"       => $row['name'],
+            "magento_id" => $row['magento_id'],
+            "action"     => '<span edit_id = "'.$row['aid'].'" onclick = "editFCSTMRType(this);"> <i class = "fa fa-pencil-square-o"> </i> </span> | <span delete_id = "'.$row['aid'].'" onclick = "deleteFCSTMRType(this);"> <i class="fa fa-trash-o"> </i> </span>'
             );
         }
         return $responses;

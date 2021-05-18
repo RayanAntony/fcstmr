@@ -49,11 +49,15 @@ function fcstmrTypesListByAjax()
         { "data": "id" },
         { "data": "name" },
         { "data": "magento_id" },
-        {
+        { "data": "action" },
+        /*{
             render: (data,type,row) => {
-                  return ` < span edit_id = '${row.aid}' onclick = "editFCSTMRType(this);" > < i class = 'fa fa-pencil-square-o' > < / i > < / span > | < span delete_id = '${row.aid}' onclick = "deleteFCSTMRType(this);" > < i class = 'fa fa-trash-o' > < / i > < / span > `;
-            }
-        }
+                console.log("row:"+row.aid);
+                  //return ` < span edit_id = '${row.aid}' onclick = "editFCSTMRType(this);" > < i class = 'fa fa-pencil-square-o' > < / i > < / span > | < span delete_id = '${row.aid}' onclick = "deleteFCSTMRType(this);" > < i class = 'fa fa-trash-o' > < / i > < / span > `;
+                  var rowId= row.aid;
+                  return '< span edit_id = "'+row.aid+'" onclick = "editFCSTMRType(this);" > < i class = "fa fa-pencil-square-o" > < / i > < / span > | < span delete_id = "'+row.aid+'" onclick = "deleteFCSTMRType(this);" > < i class = "fa fa-trash-o" > < / i > < / span >';
+              }
+        }*/
         ],
         "bDestroy": true,
         initComplete: function () {
@@ -126,7 +130,7 @@ function generateFcstmrForm(fcstmrTypeDetails)
     fcstmrModal += '</button>';
     fcstmrModal += '</div>';
     fcstmrModal += '<div class="modal-body">';
-    fcstmrModal += '<input type="hidden" name="fcstmr_aid" id="fcstmr_aid" value="' + hidden_fcstmr_aid + '">';
+    fcstmrModal += '<input type="hiddenn" name="fcstmr_aid" id="fcstmr_aid" value="' + hidden_fcstmr_aid + '">';
     fcstmrModal += '<div class="row">';
     fcstmrModal += '<div class="col-sm-12 col-md-4">';
     fcstmrModal += '<div class="form-group m-b-20">';
